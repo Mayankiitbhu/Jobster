@@ -1,5 +1,5 @@
 import { RouterProvider } from 'react-router';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter } from 'react-router-dom';
 import { Home, Landing, Register, Login, Error, ProtectedRoute } from './pages';
 import AddJob from './pages/dashboard/AddJob';
 import AllJobs from './pages/dashboard/AllJobs';
@@ -8,7 +8,7 @@ import Stats from './pages/dashboard/Stats';
 import SharedLayout from './pages/SharedLayout';
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path : '/',
     element : <Home />,
